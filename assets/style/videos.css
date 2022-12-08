@@ -25,26 +25,15 @@ ul,ol,dl {
 /******************************************* Config videos style *************************************/
 
 .content {
-}
-
-.content .container {
-
-}
-
-.content .videos {
-
-}
-
-
-.profile {
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid #282828;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 75px;
 }
+.video_container{
+
+}
+
 .container {
 
 }
@@ -65,7 +54,7 @@ form {
 
 footer {
     position: relative;
-    top: 340px;
+    top: 100px;
 }
 
 footer .container {

@@ -1,6 +1,12 @@
 <?php
     use App\Users\Users;
 ?>
+<!-- ************************** START LOADER **************************** -->
+<div id="js-loader" class="loader">
+    <h1 class="loading">Friends</h1>
+    <img  class="load_img" src="../../images/Favicon/friends.jpg" alt="image" title="friends">
+</div>
+<!-- ************************ END LOADER *******************************-->
 
 <div id="body" class="animate__animated animate__backInDown">
     <nav class="nav">
@@ -76,17 +82,12 @@
                     <img class="user_img" src="././images/img/<?=Users::auth()->image?>" alt="images" title="images">
                 </div>
                 <div class="informacion">
-
+                    <h1 class="name"><?=Users::auth()->name?><span class="surname"><?=Users::auth()->surname?></span></h1>
+                    <p class="age">Age:<?=Users::auth()->age?></p>
                     <p>Date: <?=Users::auth()->data?></p>
                     <p>Address: "<?=Users::auth()->address?>"</p>
                     <p>City: "<?=Users::auth()->city?>"</p>
                     <p>Email: "<?=Users::auth()->email?>"</p>
-                </div>
-            </div>
-            <div class="post">
-                <div class="names">
-                    <h1 class="name"><?=Users::auth()->name?><span class="surname"><?=Users::auth()->surname?></span></h1>
-                    <p class="age">Age:<?=Users::auth()->age?></p>
                 </div>
             </div>
         </div>

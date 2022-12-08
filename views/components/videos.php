@@ -1,7 +1,8 @@
 <?php
-    use App\Users\Users;
-?>
 
+use App\Users\Users;
+
+?>
 <div id="body" class="animate__animated animate__backInDown">
     <nav class="nav">
         <ul class="nav-content">
@@ -66,11 +67,37 @@
             </li>
         </ul>
     </nav>
-<!--************************************************* Videos ******************************************-->
 
-    <div class="videos">
-        <div class="container">
-            <iframe class="video" id="player" width="300" height="300"  src="--><?=Users::videos()?><!--"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- *********************************** Profile ********************   -->
+    <div class="content">
+        <div class="profile">
+            <div class="container">
+                <div class="images">
+                    <div class="user">
+                        <img class="user_img" src="././images/img/<?= Users::auth()->image ?>" alt="images"
+                             title="images">
+                    </div>
+                    <div class="informacion">
+                        <h1 class="name"><?= Users::auth()->name ?><span class="surname"><?= Users::auth()->surname ?></span></h1>
+                        <p class="age">Age:<?= Users::auth()->age ?></p>
+                        <p>Date: <?= Users::auth()->data ?></p>
+                        <p>Address: "<?= Users::auth()->address ?>"</p>
+                        <p>City: "<?= Users::auth()->city ?>"</p>
+                        <p>Email: "<?= Users::auth()->email ?>"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--************************************************* Videos ******************************************-->
+
+        <div class="videos">
+            <div class="video_container">
+                <iframe class="video" id="player" width="300" height="300" src="<?= Users::videos()->embed ?>"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+
         </div>
     </div>
 </div>
