@@ -78,7 +78,8 @@ use App\Users\Users;
                              title="images">
                     </div>
                     <div class="informacion">
-                        <h1 class="name"><?= Users::auth()->name ?><span class="surname"><?= Users::auth()->surname ?></span></h1>
+                        <h1 class="name"><?= Users::auth()->name ?><span
+                                    class="surname"><?= Users::auth()->surname ?></span></h1>
                         <p class="age">Age:<?= Users::auth()->age ?></p>
                         <p>Date: <?= Users::auth()->data ?></p>
                         <p>Address: "<?= Users::auth()->address ?>"</p>
@@ -88,7 +89,6 @@ use App\Users\Users;
                 </div>
             </div>
         </div>
-
         <!--************************************************* Videos ******************************************-->
 
         <div class="videos">
@@ -97,7 +97,6 @@ use App\Users\Users;
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
-
         </div>
     </div>
 </div>

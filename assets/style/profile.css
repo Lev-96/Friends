@@ -187,8 +187,8 @@ nav {
 /********************************* Footer **************************************/
 
 footer {
-   position: relative;
-   top: 100px;
+    position: relative;
+    top: 100px;
 }
 
 footer .container {
@@ -221,12 +221,13 @@ footer .container ul li a {
     letter-spacing: 1px;
     padding: 20px 0;
     transition: all .3s;
-    color:#000;
+    color: #000;
 }
 
-footer .container ul li a:hover{
+footer .container ul li a:hover {
     color: rgb(255, 115, 0);
 }
+
 footer .container ul li a::before {
     position: absolute;
     content: "";
@@ -268,13 +269,14 @@ footer .container p {
     right: 0;
     top: 0;
     z-index: 999;
-    background: rgb(63,94,251);
-    background: linear-gradient(-45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: rgb(63, 94, 251);
+    background: linear-gradient(-45deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
     bottom: 0;
 }
+
 .loading {
     font-family: "Agency FB", sans-serif;
     font-size: 64px;
@@ -284,12 +286,14 @@ footer .container p {
     letter-spacing: 10px;
     padding: 70px 0;
 }
+
 .load_img {
     position: absolute;
     height: 65px;
     top: 560px;
     border-radius: 50%;
 }
+
 .loader::after {
     animation: loader 0.5s linear infinite;
     border: 3px solid orange;
@@ -300,6 +304,7 @@ footer .container p {
     height: 70px;
     width: 70px;
 }
+
 @keyframes loader {
     0% {
         transform: rotate(0);
