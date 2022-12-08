@@ -167,15 +167,17 @@ nav {
     color: #ffca5a;
 }
 
+.profile .surname {
+    margin-left: 30px;
+}
+
 .profile .age {
-    /*position: relative;*/
     font-family: "Agency FB", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     letter-spacing: 3px;
     color: #ffca5a;
-    /*bottom: 95px;*/
 }
 
 .friends {
