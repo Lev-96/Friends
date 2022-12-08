@@ -7,59 +7,59 @@
         <ul class="nav-content">
             <li class="nav-list">
                 <a href="./profile.php" class="link-item active">
-                    <img class="friends" src="././images/Favicon/friends.jpg" alt="friends">
+                    <img class="friends" src="././images/Favicon/friends.jpg" alt="friends" title="Home">
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Messages">
                     <i class='bx bxs-message-rounded-dots link-icon'></i>
                     <span class="link-text">Messages</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Discussions">
                     <i class='bx bxs-conversation link-icon'></i>
                     <span class="link-text">Discussions</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Alert">
                     <i class='bx bxs-bell link-icon'></i>
                     <span class="link-text">Alert</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Friends">
                     <i class='bx bxs-user-badge link-icon'></i>
                     <span class="link-text">Friends</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Event">
                     <i class='bx bxs-calendar-event link-icon'></i>
                     <span class="link-text">Event</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="videos" class="link-item" title="Video">
                     <i class='bx bxs-videos link-icon'></i>
                     <span class="link-text">Video</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Music">
                     <i class='bx bxl-deezer link-icon'></i>
                     <span class="link-text">Music</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#" class="link-item">
+                <a href="#" class="link-item" title="Settings">
                     <i class='bx bxs-cog link-icon'></i>
                     <span class="link-text">Settings</span>
                 </a>
             </li>
             <li class="nav-list">
-                <a href="php/profile/logout.php" class="link-item">
+                <a href="php/profile/logout.php" class="link-item" title="Logout">
                     <i class='bx bxs-exit link-icon'></i>
                     <span class="link-text">Logout</span>
                 </a>
@@ -91,11 +91,5 @@
             </div>
         </div>
     </div>
-    <div class="content">
-        <div class="container">
-            <div class="videos">
 
-            </div>
-        </div>
-    </div>
 </div>

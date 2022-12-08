@@ -1,4 +1,4 @@
-<footer>
+<footer  id="body" class="animate__animated animate__backInDown">
     <div class="container">
         <div class="ul-list">
             <ul>
