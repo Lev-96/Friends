@@ -36,7 +36,6 @@ window.addEventListener('load', () => {
     const loaderDisplay = function () {
         loader.style.display = "none";
     }
-
     setTimeout(loaderOpacity, 1000);
     setTimeout(loaderDisplay, 1000 + ms);
 });

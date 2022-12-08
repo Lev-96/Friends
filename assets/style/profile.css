@@ -131,6 +131,11 @@ nav {
 .profile .user_img {
     border-radius: 50%;
     height: 100%;
+    transition: all 2s;
+    cursor: pointer;
+}
+.profile .user_img:hover{
+    transform: scale(1.1);
 }
 
 .profile .informacion {
