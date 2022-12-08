@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #282828;
+}
+
+ul, ol, dl {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*******************************************/
+
+#error {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 8px;
+}
+
+.page {
+    font-family: "Agency FB", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 64px;
+    letter-spacing: 3px;
+    color: #282828;
+}
+
+/************************************************************************/
+
+/******************************* Login Page *****************************************/
+
+body {
+    background-image: url(../../images/body/friends.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#login-form {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#login-form .container .logo {
+    width: 45%;
+}
+
+#login-form .container .logo h1 {
+    text-align: start;
+    color: rgb(255, 187, 0);
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+#login-form .container .logo p {
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+#login-form .container form {
+    border: 1px solid rgb(255, 187, 0);
+    width: 35%;
+    padding: 15px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+#login-form .container form input {
+    border: 2px solid rgb(255, 187, 0);
+    background-color: transparent;
+    border-radius: 4px;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    transition: all .3s;
+}
+
+#login-form .container form input:focus {
+    outline: none;
+    background-color: #fff;
+    border: 1px solid rgb(255, 187, 0);
+    transform: scale(1.03);
+}
+
+#login-form .container form .btn {
+    width: 100%;
+}
+
+::placeholder {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(202, 148, 0);
+}
+
+#login-form .container form .sign {
+    border: transparent;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: rgb(255, 187, 0);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#login-form .container form .sign:hover {
+    background-color: rgb(202, 148, 0);
+    letter-spacing: 2px;
+    transform: scale(1.03);
+}
+
+#login-form .container form .pass {
+    width: 100%;
+    padding: 15px;
+    color: rgb(255, 187, 0);
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 187, 0);
+    transition: all .3s;
+}
+
+#login-form .container form .pass:hover {
+    text-decoration: underline;
+    letter-spacing: 2px;
+    transform: scale(1.03);
+}
+
+#login-form .container form .signin {
+    width: 100%;
+}
+
+#login-form .container form .btns {
+    border: transparent;
+    padding: 15px;
+    width: 70%;
+    border-radius: 4px;
+    margin: 10px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(255, 72, 0);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#login-form .container form .btns:hover {
+    background-color: rgb(255, 115, 0);
+    transform: scale(1.03);
+    letter-spacing: 2px;
+}
+
+footer .container {
+    border-top: 1px solid rgb(255, 115, 0);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+footer .container ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .container ul li {
+    position: relative;
+}
+
+footer .container ul li a {
+    color: rgb(255, 115, 0);
+    padding: 20px 0;
+}
+
+footer .container ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: rgb(255, 115, 0);
+    bottom: 0;
+    top: 30px;
+    transition: all .5s;
+}
+
+footer .container ul li a:hover:before {
+    width: 100%;
+}
+
+footer .container p {
+    position: relative;
+    color: rgb(255, 115, 0);
+    font-size: 13px;
+    font-weight: 100;
+    font-family: serif;
+    letter-spacing: 2px;
+    top: 50px;
+}
+
+/********************************** Login Page / **************************************/
+
+
+/*********************************** Register Page / ************************************************/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.registracion-form .container h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+    letter-spacing: 5px;
+    color: rgb(255, 115, 0);
+}
+
+.registracion-form .container form {
+    width: 80%;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid rgb(255, 115, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registracion-form .container form input {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.registracion-form .container form input:focus {
+    outline: none;
+    border: 1px solid rgb(255, 115, 0);
+    border-radius: 8px;
+    transition: all .1s;
+}
+
+::placeholder {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.registracion-form .container form .labels {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(255, 115, 0);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.registracion-form .container form .labels label {
+    cursor: pointer;
+    transition: all .5s;
+    color: rgb(255, 115, 0);
+    transition: all .3s;
+}
+
+.registracion-form .container form .labels label:hover {
+    color: #000;
+}
+
+.registracion-form .container form button {
+    border: transparent;
+    padding: 15px;
+    width: 40%;
+    border-radius: 4px;
+    background-color: rgb(255, 115, 0);
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 18px;
+    color: #fff;
+    font-family: serif;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.registracion-form .container form button:hover {
+    background-color: red;
+}
+
+.registracion-form .container p {
+    width: 70%;
+    margin: 20px auto;
+    line-height: 1.5;
+    color: rgb(255, 208, 0);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.registracion-form .container .home {
+    position: relative;
+    color: rgb(255, 115, 0);
+    font-size: 16px;
+    top: 10px;
+    transition: all .3s;
+}
+
+.registracion-form .container .home:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+.custom-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#uploadsed {
+    position: absolute;
+    right: -60px;
+    top: -120px;
+    cursor: pointer;
+}
+
+.error {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed #f00;
+    color: #f00 !important;
+}
+
+.success {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed green;
+    color: green !important;
+}
+
+/******************************** Register Page / ****************************************/
+
+
+/********************************* Reset Password ***********************************************/
+.groupBtn {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.btnSignin {
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border: transparent;
+    background-color: rgb(255, 187, 0);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btnSignin:hover {
+    background-color: rgb(255, 115, 0);
+}
+
+.searchBtn {
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border: transparent;
+    background-color: rgb(255, 187, 0);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.searchBtn:hover {
+    background-color: #eeeeee;
+    color: rgb(255, 187, 0);
+}
+
+.cancelBtn {
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border: transparent;
+    background-color: rgb(255, 187, 0);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cancelBtn:hover {
+    background-color: #980000;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.logins {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
+
+.logins h1 {
+    margin-left: 30px;
+    color: rgb(255, 187, 0);
+    letter-spacing: 3px;
+}
+
+.logins form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.logins form input {
+    border: 2px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+::placeholder {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.logins form input:focus {
+    outline: none;
+    border: 1px solid rgb(255, 187, 0);
+}
+
+.logins form .btn {
+    width: 100%;
+}
+
+.logins form .sign {
+    border: transparent;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: rgb(255, 187, 0);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.logins form .sign:hover {
+    background-color: rgb(202, 148, 0);
+}
+
+.logins form .pass {
+    padding: 10px;
+    color: rgb(255, 187, 0);
+    font-size: 12px;
+    margin: 15px 0;
+    text-align: center;
+    transition: all .3s;
+}
+
+.logins form .pass:hover {
+    text-decoration: underline;
+}
+
+.logins form .signin {
+    width: 100%;
+}
+
+.passReset .container form {
+    width: 40%;
+    border: 1px solid rgb(255, 187, 0);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.passReset .container form h2 {
+    color: rgb(255, 187, 0);
+    padding: 10px;
+}
+
+.passReset .container form p {
+    border-top: 1px solid rgb(255, 187, 0);
+    color: red;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family: serif;
+    font-weight: 100;
+    padding: 10px;
+}
+
+.passReset .container form input {
+    border: 2px solid #eee;
+    border-radius: 4px;
+    width: 80%;
+    padding: 15px;
+    margin: 10px auto;
+    transition: all .5s;
+}
+
+.passReset .container form input:focus {
+    outline: none;
+    border: 1px solid rgb(255, 187, 0);
+}
+
+/********************************** Reset Password / *************************************/
+
+
