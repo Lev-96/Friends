@@ -125,8 +125,8 @@ use App\Users\Videos;
             </div>
             <div class="flex_videos">
                 <?php
-                $data = json_decode(file_get_contents("php://input"));
-                $link_delete = $data->btn;
+//                $data = json_decode(file_get_contents("php://input"));
+//                $link_delete = $data->btn;
                 if (Videos::usersVideos()) {
                     $results = Videos::usersVideos();
                     foreach ($results as $result) {

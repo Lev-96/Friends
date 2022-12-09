@@ -45,24 +45,24 @@ window.addEventListener('DOMContentLoaded', () => {
 /*********************************** Ajax Database ***************************************/
 
 
-let link_btn = document.querySelector("#link_btn")
-
-let getSubmit = async () =>{
-    if(link_btn) {
-        console.log("ok");
-        const data = {
-            btn: link_btn,
-        }
-
-        const response = await fetch('../../views/components/videos.php', {
-            method:'POST',
-            body: JSON.stringify(data)
-        })
-
-        const response_data = await response.data
-        console.log(response);
-    }
-}
-link_btn.addEventListener('click', getSubmit)
+// let link_btn = document.querySelector("#link_btn").value
+//
+// let getSubmit = async () =>{
+//     if(link_btn.value) {
+//         console.log("ok");
+//         const data = {
+//             btn: link_btn.value,
+//         }
+//
+//         const response = await fetch('../../views/components/videos.php', {
+//             method:'POST',
+//             body: JSON.stringify(data)
+//         })
+//
+//         const response_data = await response.data
+//         console.log(response);
+//     }
+// }
+// link_btn.addEventListener('click', getSubmit)
 
 /*********************************** Ajax Database / ***************************************/
