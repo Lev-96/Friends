@@ -77,11 +77,13 @@ use App\Users\Users;
 
 
     <!-- *********************************** Profile ********************   -->
+
     <div class="profile">
         <div class="container">
             <div class="images">
                 <div class="user">
-                    <img class="user_img" src="././images/img/<?= Users::auth()->image ?>" alt="images" title="<?= Users::auth()->name ?>">
+                    <img class="user_img" src="././images/img/<?= Users::auth()->image ?>" alt="images"
+                         title="<?= Users::auth()->name ?>">
                 </div>
                 <div class="informacion">
                     <h1 class="name"><?= Users::auth()->name ?><span

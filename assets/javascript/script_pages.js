@@ -26,14 +26,14 @@ linkItems.forEach((linkItem, index) => {
 
 
 const loader = document.getElementById('js-loader');
-window.addEventListener('load', () => {
-    const ms = 400;
-    loader.style.transition = 'opacity ' + ms + 'ms';
+window.addEventListener('DOMContentLoaded', () => {
+    let ms = 400;
+    loader.style.transition = 'all .3s';
 
-    const loaderOpacity = function () {
+    let loaderOpacity = function () {
         loader.style.opacity = 0;
     }
-    const loaderDisplay = function () {
+    let loaderDisplay = function () {
         loader.style.display = "none";
     }
     setTimeout(loaderOpacity, 1000);
@@ -41,3 +41,28 @@ window.addEventListener('load', () => {
 });
 
 /*********************************** Loader / ***************************************/
+
+/*********************************** Ajax Database ***************************************/
+
+
+let link_btn = document.querySelector("#link_btn")
+
+let getSubmit = async () =>{
+    if(link_btn) {
+        console.log("ok");
+        const data = {
+            btn: link_btn,
+        }
+
+        const response = await fetch('../../views/components/videos.php', {
+            method:'POST',
+            body: JSON.stringify(data)
+        })
+
+        const response_data = await response.data
+        console.log(response);
+    }
+}
+link_btn.addEventListener('click', getSubmit)
+
+/*********************************** Ajax Database / ***************************************/

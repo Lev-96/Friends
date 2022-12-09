@@ -30,27 +30,147 @@ ul, ol, dl {
     align-items: center;
     gap: 75px;
 }
+.video {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 
+}
 .video_container {
-
+    position: relative;
+    padding: 25px;
+    border-radius: 8px;
+    border: 3px solid #ffca5a;
+    background-color: #ffca5a;
+    cursor: pointer;
+    transition: all .3s;
+}
+.video_container:hover{
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.video_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.container {
-
+.absalute_close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all .5s;
+}
+.absalute_close:hover{
+    border: 1px solid #f00;
+    color: #f00;
+}
+.close{
+    display: block;
+    margin: 4px auto;
+}
+.form_design{
+    margin: 0 auto;
+}
+.form_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    border: 1px solid #282828;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #ffca5a;
+}
+.form_content input{
+    padding: 10px 20px;
+    border: transparent;
+    border-radius: 4px;
+    transition: all .3s;
+}
+::placeholder{
+    font-family: "Agency FB", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #ffca5a;
+}
+.form_content input:focus {
+    outline: none;
+    border: 1px solid #ffca5a;
+    transform: scale(1.1);
 }
 
-form {
-
+.btn{
+    font-family: "Agency FB", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    color: #ffca5a;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s;
 }
 
-#selects {
-
+.btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(108, 70, 0, 0.78);
+    color: #fff;
 }
 
-.btn {
-
+.name,
+.name,
+.embed,
+.description {
+    font-family: "Agency FB", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #fff;
 }
 
+.flex_videos {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+.error {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed #f00;
+    color: #f00 !important;
+}
+
+.success {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed green;
+    color: green !important;
+}
 
 /******************************************* Footer ************************************************/
 

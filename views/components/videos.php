@@ -1,8 +1,11 @@
 <?php
+session_start();
 
 use App\Users\Users;
+use App\Users\Videos;
 
 ?>
+
 <div id="body" class="animate__animated animate__backInDown">
     <nav class="nav">
         <ul class="nav-content">
@@ -69,6 +72,7 @@ use App\Users\Users;
     </nav>
 
     <!-- *********************************** Profile ********************   -->
+
     <div class="content">
         <div class="profile">
             <div class="container">
@@ -89,13 +93,63 @@ use App\Users\Users;
                 </div>
             </div>
         </div>
-        <!--************************************************* Videos ******************************************-->
 
-        <div class="videos">
-            <div class="video_container">
-                <iframe class="video" id="player" width="300" height="300" src="<?= Users::videos()->embed ?>"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+        <!--************************************************* Videos ******************************************-->
+        <div class="video_content">
+            <div class="form_design">
+                <form action="../../php/profile/videos.php" method="post" enctype="multipart/form-data"
+                      class="form_content">
+                    <input type="text" placeholder="Your name" name="name">
+                    <input type="text" placeholder="Your description" name="description">
+                    <input type="text" placeholder="Your embed code" name="embed">
+                    <button type="submit" class="btn">Add Videos</button>
+                    <?php if (isset($_SESSION['error'])) { ?>
+                        <p class="error">
+                            <?php
+                            echo $_SESSION['error'];
+                            unset($_SESSION['error']);
+                            ?>
+                        </p>
+                        <?php
+                    } elseif (isset($_SESSION['success'])) { ?>
+                        <p class="success">
+                            <?php
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                            ?>
+                        </p>
+                        <?php
+                    }
+                    ?>
+                </form>
+            </div>
+            <div class="flex_videos">
+                <?php
+                $data = json_decode(file_get_contents("php://input"));
+                $link_delete = $data->btn;
+                if (Videos::usersVideos()) {
+                    $results = Videos::usersVideos();
+                    foreach ($results as $result) {
+                        ?>
+                        <div class="videos">
+                            <div class="video_container">
+                                <iframe class="video" id="player" width="250" height="250"
+                                        src="<?= $result['embed'] ?>"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                </iframe>
+                                <h1 class="name">Name: <?= $result['name_input'] ?></h1>
+                                <p class="embed">User: <?= $result['user_id'] ?></p>
+                                <p class="description">Description: <?= $result['description'] ?></p>
+                                <a href="#" class="absalute_close" id="link_btn" >
+                                    <span class="close">X</span>
+                                </a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>

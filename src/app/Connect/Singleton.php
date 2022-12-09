@@ -9,9 +9,7 @@ class Singleton
 {
 
     private $_mysqli,
-        $_query,
-        $_result,
-        $_count = 0;
+        $_result;
 
     public static $instance;
 
@@ -38,17 +36,4 @@ class Singleton
     }
 }
 /*************************************************************************************************** ***/
-//    public static $connection;
-//    private function __construct()
-//    {
-//        return new \mysqli('localhost','root','','friends');
-//    }
-//    public function connect(): Singleton
-//    {
-//        if (!isset(self::$connection))
-//        {
-//            self::$connection = new singleton();
-//        }
-//        return self::$connection;
-//    }
 

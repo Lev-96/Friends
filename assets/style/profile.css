@@ -5,13 +5,13 @@
 }
 
 body {
-    background-image: url("../../images/profile/profile.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-color: #999;
-    min-height: 100vh;
+    /*background-image: url("../../images/profile/profile.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*background-color: #999;*/
+    /*min-height: 100vh;*/
 }
 
 a {
