@@ -5,7 +5,13 @@ use App\Users\Users;
 use App\Users\Videos;
 
 ?>
-
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
 <div id="body" class="animate__animated animate__backInDown">
     <nav class="nav">
         <ul class="nav-content">
@@ -131,7 +137,7 @@ use App\Users\Videos;
                     $results = Videos::usersVideos();
                     foreach ($results as $result) {
                         ?>
-                        <div class="videos">
+                        <div class="videos" data-id="<?=$result['id']?>">
                             <div class="video_container">
                                 <iframe class="video" id="player" width="250" height="250"
                                         src="<?= $result['embed'] ?>"
@@ -141,9 +147,7 @@ use App\Users\Videos;
                                 <h1 class="name">Name: <?= $result['name_input'] ?></h1>
                                 <p class="embed">User: <?= $result['user_id'] ?></p>
                                 <p class="description">Description: <?= $result['description'] ?></p>
-                                <a href="#" class="absalute_close" id="link_btn" >
-                                    <span class="close">X</span>
-                                </a>
+                                <button type="button" class="delete_video btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">X</button>
                             </div>
                         </div>
                         <?php
@@ -154,3 +158,30 @@ use App\Users\Videos;
         </div>
     </div>
 </div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            Vstah eq vor uzum eq jnjel ?
+
+        </div>
+        <div class="modal-footer">
+            <input type="hidden" class="delete_video_id" value="" >
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Delete</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).on('click', '.delete_video', function () {
+        var id = $(this).closest('.videos').data('id');
+        $('.delete_video_id').val(id);
+    });
+
+   $(document).on('click', '.', function () {
+        var id ;
+
+    });
+
+
+</script>

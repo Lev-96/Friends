@@ -19,7 +19,6 @@ class Videos
 
     public static function deleteVideos()
     {
-        $tube_id = $_SESSION['id'];
         $delete_videos = Singleton::getInstance()->query("DELETE FROM `tube` WHERE `user_id` = '$tube_id'");
         return $delete_videos;
     }
