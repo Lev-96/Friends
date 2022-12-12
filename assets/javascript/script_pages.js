@@ -42,27 +42,68 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /*********************************** Loader / ***************************************/
 
-/*********************************** Ajax Database ***************************************/
+
+const panel = document.getElementById("js-panel");
+const btns = document.querySelectorAll(".flap__btn");
 
 
-// let link_btn = document.querySelector("#link_btn").value
-//
-// let getSubmit = async () =>{
-//     if(link_btn.value) {
-//         console.log("ok");
-//         const data = {
-//             btn: link_btn.value,
-//         }
-//
-//         const response = await fetch('../../views/components/videos.php', {
-//             method:'POST',
-//             body: JSON.stringify(data)
-//         })
-//
-//         const response_data = await response.data
-//         console.log(response);
-//     }
-// }
-// link_btn.addEventListener('click', getSubmit)
+function hidePanel() {
+    panel.classList.remove("is--open");
+}
 
-/*********************************** Ajax Database / ***************************************/
+const init = function () {
+    panel.classList.add("is--open");
+
+
+}
+
+/**************************** Window open Ajax ***************************************/
+
+// const items = document.querySelector('.items')
+const deleteItem = document.querySelectorAll('.deleteItem')
+const delete_video_id = document.querySelector('.delete_video_id')
+const btn_yes = document.querySelector('#btn_yes')
+// const btn_no = document.querySelector('#btn_no')
+
+deleteItem.forEach(element => {
+    element.addEventListener('click', (e) => {
+        panel.style.display = "block"
+        delete_video_id.value = element.closest('.videos').dataset.id;
+        init();
+    })
+});
+
+
+btns.forEach(el => {
+    el.addEventListener("click", (e) => {
+        e.preventDefault()
+        if (e.target === btn_yes) {
+            fetchData()
+        }
+        hidePanel()
+
+    })
+})
+
+
+const fetchData = async () => {
+    const formData = {id: delete_video_id.value}
+    try {
+        const response = await fetch(
+            './php/profile/ajax_request.php',
+            {
+                body: JSON.stringify(formData),
+                method: 'POST',
+                header: {"Content-Type": "application/json"}
+            }
+        )
+
+        const data = response.json()
+        // console.log(data);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+/**************************** Window open Ajax / ***************************************/

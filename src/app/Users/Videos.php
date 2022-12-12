@@ -1,8 +1,10 @@
 <?php
-namespace App\Users;
-use App\Connect\Singleton;
-session_start();
 
+namespace App\Users;
+
+use App\Connect\Singleton;
+
+session_start();
 
 class Videos
 {
@@ -19,7 +21,9 @@ class Videos
 
     public static function deleteVideos()
     {
-        $delete_videos = Singleton::getInstance()->query("DELETE FROM `tube` WHERE `user_id` = '$tube_id'");
+        require_once 'php/profile/ajax_request.php';
+        $id = $_GET['id'];
+        $delete_videos = Singleton::getInstance()->query("DELETE FROM `tube` WHERE `id`= '$id'");
         return $delete_videos;
     }
 }

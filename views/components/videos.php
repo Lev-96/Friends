@@ -5,13 +5,7 @@ use App\Users\Users;
 use App\Users\Videos;
 
 ?>
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            ...
-        </div>
-    </div>
-</div>
+
 <div id="body" class="animate__animated animate__backInDown">
     <nav class="nav">
         <ul class="nav-content">
@@ -131,8 +125,6 @@ use App\Users\Videos;
             </div>
             <div class="flex_videos">
                 <?php
-//                $data = json_decode(file_get_contents("php://input"));
-//                $link_delete = $data->btn;
                 if (Videos::usersVideos()) {
                     $results = Videos::usersVideos();
                     foreach ($results as $result) {
@@ -147,7 +139,11 @@ use App\Users\Videos;
                                 <h1 class="name">Name: <?= $result['name_input'] ?></h1>
                                 <p class="embed">User: <?= $result['user_id'] ?></p>
                                 <p class="description">Description: <?= $result['description'] ?></p>
-                                <button type="button" class="delete_video btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">X</button>
+<!--                                <button type="button" class="delete_video btn btn-primary"  data-target=".bd-example-modal-lg">X</button>-->
+                                <!--Open Window -->
+                                <div class="items deleteItem" data-target="videos">
+                                    <a href="../../src/app/Users/Videos.php?id=<?=Videos::deleteVideos()?>" class='deleteItem' >X</a>
+                                </div>
                             </div>
                         </div>
                         <?php
@@ -159,29 +155,20 @@ use App\Users\Videos;
     </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            Vstah eq vor uzum eq jnjel ?
-
-        </div>
-        <div class="modal-footer">
-            <input type="hidden" class="delete_video_id" value="" >
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Delete</button>
-        </div>
+<!-- Close window -->
+<div class="videos panel" id="js-panel" >
+    <input type="hidden" class='delete_video_id' name="delete_video_id">
+    <div class="panel__content">
+        <h4>Just Checking...</h4>
+        <h2>Delete your Videos?</h2>
+        <p>This action is final, and you will be unable to recover any data</p>
+    </div>
+    <div class="panel__flaps">
+        <div class="flap outer flap--left"></div>
+        <a class="flap flap__btn" id="btn_yes" href="#">YES</a>
+        <a class="flap flap__btn" id="btn_no" href="#">NO</a>
+        <div class="flap outer flap--right"></div>
     </div>
 </div>
-<script>
-    $(document).on('click', '.delete_video', function () {
-        var id = $(this).closest('.videos').data('id');
-        $('.delete_video_id').val(id);
-    });
 
-   $(document).on('click', '.', function () {
-        var id ;
-
-    });
-
-
-</script>
+<!-- Close window -->
