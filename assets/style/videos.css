@@ -46,7 +46,7 @@ ul, ol, dl {
 }
 .video_container:hover{
     transform: scale(1.03);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
 }
 .video_content {
     display: flex;
@@ -201,7 +201,6 @@ ul, ol, dl {
     pointer-events: initial;
 }
 *, *:before, *:after {
-    -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
